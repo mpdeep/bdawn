@@ -141,7 +141,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-                <mainClass>com.google.cloud.hadoop.io.bigquery.samples.WordCountDriver</mainClass>
+                <mainClass>com.example.bigtable.sample.WordCountDriver</mainClass>
             </manifest>
           </archive>
         </configuration>
