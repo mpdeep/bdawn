@@ -82,6 +82,18 @@ start)  # start [<clusterName>]
 
   CLUSTER="${2:-$DEFAULT_CLUSTER}"
 
+#  TARGET="WordCount-$(date +%s)"
+#  gcloud dataproc jobs submit hadoop --cluster "$CLUSTER" \
+#    --jar target/wordcount-mapreduce-0-SNAPSHOT-jar-with-dependencies.jar \
+#    -- wordcount-hbase \
+#    gs://lesv-big-public-data/books/book \
+#    gs://lesv-big-public-data/books/b10 \
+#    gs://lesv-big-public-data/books/b100 \
+#    gs://lesv-big-public-data/books/b1232 \
+#    gs://lesv-big-public-data/books/b6130 \
+#    "${TARGET}"
+#    echo "Output table is: ${TARGET}"
+ 
   TARGET="WordCount-$(date +%s)"
   gcloud dataproc jobs submit hadoop --cluster "$CLUSTER" \
     --jar target/wordcount-mapreduce-0-SNAPSHOT-jar-with-dependencies.jar \
